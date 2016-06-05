@@ -87,6 +87,25 @@ function partneredhearts_nav()
 	);
 }
 
+function bootstrap_nav()
+{
+    wp_nav_menu( 
+    array(
+        'menu'              => 'header-menu',
+        'theme_location'    => 'header-menu',
+        'depth'             => 2,
+        'container'         => 'div',
+        'container_class'   => 'collapse navbar-collapse',
+        'container_id'      => 'bs-example-navbar-collapse-1',
+        'menu_class'        => 'nav navbar-nav',
+        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+        'walker'            => new wp_bootstrap_navwalker()
+        )
+    );
+}
+
+
+
 // Load PartneredHearts scripts (header.php)
 function partneredhearts_header_scripts()
 {
@@ -355,7 +374,7 @@ add_action('wp_print_scripts', 'partneredhearts_conditional_scripts'); // Add Co
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'partneredhearts_styles'); // Add Theme Stylesheet
 add_action('init', 'register_partneredhearts_menu'); // Add PartneredHearts Menu
-add_action('init', 'create_post_type_partneredhearts'); // Add our PartneredHearts Custom Post Type
+//add_action('init', 'create_post_type_partneredhearts'); // Add our PartneredHearts Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'partneredheartswp_pagination'); // Add our PartneredHearts Pagination
 
@@ -480,4 +499,26 @@ function partneredhearts_theme_customizer( $wp_customize ) {
 }
 add_action('customize_register', 'partneredhearts_theme_customizer');
 
+
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	/*
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Front Page Slideshow',
+		'menu_title'	=> 'Front Page Slideshow',
+		'parent_slug'	=> 'theme-general-settings',
+	));	*/
+}
+
+
+
+require_once('wp_bootstrap_navwalker.php');
 ?>

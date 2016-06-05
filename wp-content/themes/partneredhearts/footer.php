@@ -1,22 +1,22 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
-
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'partneredhearts'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//partneredhearts.com" title="PartneredHearts">PartneredHearts</a>.
-				</p>
-				<!-- /copyright -->
-
-			</footer>
-			<!-- /footer -->
-
-		</div>
-		<!-- /wrapper -->
+			</div><!-- /container -->
+		</div><!--end wrap-->
+		<!-- footer -->
+		<footer class="footer" style="min-height:<?PHP the_field('footer_height','option'); ?>px">	
+            <div class="container">   
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div>
+                            Footer
+                        </div>
+                    </div>
+                </div><!--End Row-->
+            </div>
+		</footer>
+		<!-- /footer -->
 
 		<?php wp_footer(); ?>
 
-		<!-- analytics -->
+		<!-- analytics 
 		<script>
 		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
 		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
@@ -24,7 +24,7 @@
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
 		ga('send', 'pageview');
-		</script>
+		</script>-->
 
 	</body>
 </html>

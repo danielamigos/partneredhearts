@@ -27,11 +27,21 @@
 }
 /* html element 62.5% font-size for REM use */
 html {
-	font-size:62.5%;
+  position: relative;
+  height: 100%;
 }
 body {
-	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	/*font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 	color:#444;
+	padding-top: 50px;
+    height:100%
+}
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin:0 auto;
+    padding: 0 0;
 }
 /* clear */
 .clear:before,
@@ -70,6 +80,39 @@ input:focus {
 }
 
 /*------------------------------------*\
+    NAVBAR
+\*------------------------------------*/
+.navbar{
+	min-height: 50px;
+}
+
+.navbar-nav
+{
+	font-family: 'DIN-Medium';
+	text-transform: uppercase;
+}
+
+.navbar-inverse,
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:hover, 
+.navbar-inverse .navbar-nav>.active>a:focus{
+	background-color: #939598;
+    border:none;
+}
+.navbar-inverse .navbar-nav>li>a
+{
+    color: #DADADA;
+    font-size:22px;
+	transition: all 0.3s ease 0s;
+    white-space:nowrap;
+}
+
+.navbar-nav > li > a{
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+/*------------------------------------*\
     STRUCTURE
 \*------------------------------------*/
 
@@ -93,7 +136,7 @@ input:focus {
 }
 /* nav */
 .nav {
-
+/**/
 }
 /* sidebar */
 .sidebar {
@@ -101,7 +144,14 @@ input:focus {
 }
 /* footer */
 .footer {
-
+	/*position: absolute;
+	bottom: 0;*/
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	/*height: 60px;*/
+	background-color: #575756;
+    color: #ffffff;
+    padding-top: 30px;
 }
 
 /*------------------------------------*\
@@ -121,70 +171,60 @@ input:focus {
 \*------------------------------------*/
 
 @font-face {
-	font-family:'TeXGyreAdventor-Regular';
-	src: url('fonts/TeXGyreAdventor-Regular_gdi.eot');
-	src: url('fonts/TeXGyreAdventor-Regular_gdi.eot?#iefix') format('embedded-opentype'),
-		url('fonts/TeXGyreAdventor-Regular_gdi.woff') format('woff'),
-		url('fonts/TeXGyreAdventor-Regular_gdi.ttf') format('truetype'),
-		url('fonts/TeXGyreAdventor-Regular_gdi.otf') format('opentype'),
-		url('fonts/TeXGyreAdventor-Regular_gdi.svg#TeXGyreAdventor-Regular') format('svg');
+	font-family:'DIN-Regular';
+	src: url('fonts/DIN-Regular_gdi.eot');
+	src: url('fonts/DIN-Regular_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DIN-Regular_gdi.woff') format('woff'),
+		url('fonts/DIN-Regular_gdi.ttf') format('truetype'),
+		url('fonts/DIN-Regular_gdi.otf') format('opentype'),
+		url('fonts/DIN-Regular_gdi.svg#DIN-Regular') format('svg');
 	font-weight: 400;
 	font-style: normal;
 	font-stretch: normal;
-	unicode-range: U+0-10FFFF;
+	unicode-range: U+0020-25CA;
 }
 
 @font-face {
-	font-family:'TeXGyreAdventor-Italic';
-	src: url('fonts/TeXGyreAdventor-Italic_gdi.eot');
-	src: url('fonts/TeXGyreAdventor-Italic_gdi.eot?#iefix') format('embedded-opentype'),
-		url('fonts/TeXGyreAdventor-Italic_gdi.woff') format('woff'),
-		url('fonts/TeXGyreAdventor-Italic_gdi.ttf') format('truetype'),
-		url('fonts/TeXGyreAdventor-Italic_gdi.otf') format('opentype'),
-		url('fonts/TeXGyreAdventor-Italic_gdi.svg#TeXGyreAdventor-Italic') format('svg');
-	font-weight: 400;
-	font-style: italic;
+	font-family:'DIN-Medium';
+	src: url('fonts/DIN-Medium_gdi.eot');
+	src: url('fonts/DIN-Medium_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DIN-Medium_gdi.woff') format('woff'),
+		url('fonts/DIN-Medium_gdi.ttf') format('truetype'),
+		url('fonts/DIN-Medium_gdi.otf') format('opentype'),
+		url('fonts/DIN-Medium_gdi.svg#DIN-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
 	font-stretch: normal;
-	unicode-range: U+0-10FFFF;
+	unicode-range: U+0020-25CA;
 }
 
 @font-face {
-	font-family:'TeXGyreAdventor-Bold';
-	src: url('fonts/TeXGyreAdventor-Bold_gdi.eot');
-	src: url('fonts/TeXGyreAdventor-Bold_gdi.eot?#iefix') format('embedded-opentype'),
-		url('fonts/TeXGyreAdventor-Bold_gdi.woff') format('woff'),
-		url('fonts/TeXGyreAdventor-Bold_gdi.ttf') format('truetype'),
-		url('fonts/TeXGyreAdventor-Bold_gdi.otf') format('opentype'),
-		url('fonts/TeXGyreAdventor-Bold_gdi.svg#TeXGyreAdventor-Bold') format('svg');
+	font-family:'DIN-Light';
+	src: url('fonts/DIN-Light_gdi.eot');
+	src: url('fonts/DIN-Light_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DIN-Light_gdi.woff') format('woff'),
+		url('fonts/DIN-Light_gdi.ttf') format('truetype'),
+		url('fonts/DIN-Light_gdi.otf') format('opentype'),
+		url('fonts/DIN-Light_gdi.svg#DIN-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+	font-family:'DIN-Bold';
+	src: url('fonts/DIN-Bold_gdi.eot');
+	src: url('fonts/DIN-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('fonts/DIN-Bold_gdi.woff') format('woff'),
+		url('fonts/DIN-Bold_gdi.ttf') format('truetype'),
+		url('fonts/DIN-Bold_gdi.otf') format('opentype'),
+		url('fonts/DIN-Bold_gdi.svg#DIN-Bold') format('svg');
 	font-weight: 700;
 	font-style: normal;
 	font-stretch: normal;
-	unicode-range: U+0-10FFFF;
+	unicode-range: U+0020-25CA;
 }
-
-@font-face {
-	font-family:'TeXGyreAdventor-BoldItalic';
-	src: url('fonts/TeXGyreAdventor-BoldItalic_gdi.eot');
-	src: url('fonts/TeXGyreAdventor-BoldItalic_gdi.eot?#iefix') format('embedded-opentype'),
-		url('fonts/TeXGyreAdventor-BoldItalic_gdi.woff') format('woff'),
-		url('fonts/TeXGyreAdventor-BoldItalic_gdi.ttf') format('truetype'),
-		url('fonts/TeXGyreAdventor-BoldItalic_gdi.otf') format('opentype'),
-		url('fonts/TeXGyreAdventor-BoldItalic_gdi.svg#TeXGyreAdventor-BoldItalic') format('svg');
-	font-weight: 700;
-	font-style: italic;
-	font-stretch: normal;
-	unicode-range: U+0-10FFFF;
-}
-
-@font-face {
-    font-family: 'ThirstyScriptLight';
-    src: url('fonts/3095E9_0_0.eot');
-    src: url('fonts/3095E9_0_0.eot?#iefix') format('embedded-opentype'),
-        url('fonts/3095E9_0_0.woff2') format('woff2'),
-        url('fonts/3095E9_0_0.woff') format('woff'),
-        url('fonts/3095E9_0_0.ttf') format('truetype');
-}
- 
 
 /*------------------------------------*\
     RESPONSIVE
@@ -197,7 +237,30 @@ input:focus {
 
 }
 @media only screen and (min-width:768px) {
+	body{
+		padding-top: 40px;
+	}
+	.navbar{
+		min-height: 40px;
+	}
 
+    .navbar-inverse .navbar-nav > li > a {
+        font-size: 14px;
+    }
+    .navbar-nav {
+	    display:table;
+	    width:100%;
+	    margin: 0;
+	}
+	.navbar-nav > li {
+	    display:table-cell;
+	    text-align:center;
+		float: none;
+	}
+	.navbar-nav > li > a{
+		padding-top:10px;
+		padding-bottom:10px;
+	}
 }
 @media only screen and (min-width:1024px) {
 
