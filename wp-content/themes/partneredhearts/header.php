@@ -49,7 +49,7 @@
 	  //if ( is_admin_bar_showing() ) echo '<div style="min-height: 32px;">&nbsp;</div>'; 
 	?>
     <nav class="navbar navbar-inverse navbar-fixed-top" style="<?php if ( is_admin_bar_showing() ) echo 'top:32px;';?>">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -64,4 +64,4 @@
       </div>
     </nav>
     
-    <div class="container">
+    <div class="container-fluid">

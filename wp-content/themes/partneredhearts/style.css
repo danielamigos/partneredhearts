@@ -31,8 +31,8 @@ html {
   height: 100%;
 }
 body {
-	/*font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
-	color:#444;
+	font:300 14px 'DIN-Medium', Helvetica, Arial, sans-serif;	
+	color:#ffffff;
 	padding-top: 50px;
     height:100%
 }
@@ -78,6 +78,10 @@ input:focus {
 	outline:0;
 	border:1px solid #04A4CC;
 }
+h2{
+	margin-top:0;
+	margin-bottom:25px;
+}
 
 /*------------------------------------*\
     NAVBAR
@@ -115,7 +119,13 @@ input:focus {
 /*------------------------------------*\
     STRUCTURE
 \*------------------------------------*/
-
+.container-fluid {
+    padding: 0px;
+	max-width: 1170px;
+}
+.container {
+    padding: 0px;
+}
 /* wrapper */
 .wrapper {
 	max-width:1280px;
@@ -123,6 +133,8 @@ input:focus {
 	margin:0 auto;
 	position:relative;
 }
+
+
 /* header */
 .header {
 
@@ -153,7 +165,142 @@ input:focus {
     color: #ffffff;
     padding-top: 30px;
 }
+/*Bootstrap Grid system, no-gutters*/
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+/*
+.row.no-gutter [class*='col-']:not(:first-child),
+.row.no-gutter [class*='col-']:not(:last-child) {
+  padding-right: 0;
+  padding-left: 0;
+}*/
+.row.no-gutter [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
 
+/*------------------------------------*\
+    FONT COLORS
+\*------------------------------------*/
+.font-color-turquoise
+{
+    color:#00A693;
+}
+
+.font-color-teal
+{
+	color: #00808C;
+}
+
+.font-color-white
+{
+	color: #ffffff;
+}
+
+.font-color-black
+{
+	color: #000000;
+}
+
+/*------------------------------------*\
+    FONT FAMILIES
+\*------------------------------------*/
+
+.font-family-din-medium
+{
+	font-family: 'DIN-Medium';
+}
+
+.font-family-fancy
+{
+	font-family: "CaflischScriptPro-Regular";
+}
+
+/*------------------------------------*\
+    FONT SIZES
+\*------------------------------------*/
+.font-size-xxlarge
+{
+    font-size:70px; 
+}
+.font-size-xlarge
+{
+    font-size:40px; 
+}
+.font-size-large
+{
+    font-size:30px; 
+}
+.font-size-medium
+{
+    font-size: 16px;
+}
+.font-size-regular
+{
+    font-size: 14px;
+}
+.font-size-small
+{
+    font-size: 10px;
+}
+
+/*------------------------------------*\
+    BACKGROUND COLORS
+\*------------------------------------*/
+.background-color-gray
+{
+	background-color: #A7A9AB;
+}
+.background-color-dark-gray
+{
+	background-color: #6D6E70;
+}.background-color-turquoise
+{
+    background-color:#00A693;
+}
+.background-color-teal
+{
+	background-color: #00808C;
+}
+/*------------------------------------*\
+    DYNAMIC CONTENT
+\*------------------------------------*/
+.full-width-image-quote-and-author-wrapper
+{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom:0;
+	padding-bottom:30px;
+}
+.full-width-image-quote
+{
+	padding: 0 12%;
+	line-height: 50px;
+}
+/*------------------------------------*\
+    FRONTPAGE
+\*------------------------------------*/
+
+.frontpage-jumbotron-wrapper
+{
+	position: relative;
+	height: 90vh;   
+}
+.frontpage-jumbotron
+{    
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	
+}
+.content-padding
+{
+	padding: 35px;
+}
 /*------------------------------------*\
     PAGES
 \*------------------------------------*/
@@ -170,6 +317,19 @@ input:focus {
 	TYPOGRAPHY
 \*------------------------------------*/
 
+@font-face {
+	font-family:'CaflischScriptPro-Regular';
+	src: url('fonts/CaflischScriptPro-Regular.eot');
+	src: url('fonts/CaflischScriptPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('fonts/CaflischScriptPro-Regular.woff') format('woff'),
+		url('fonts/CaflischScriptPro-Regular.ttf') format('truetype'),
+		url('fonts/CaflischScriptPro-Regular.otf') format('opentype'),
+		url('fonts/CaflischScriptPro-Regular.svg#DIN-Regular') format('svg');
+	/*font-weight: 400;*/
+	font-style: normal;
+	font-stretch: normal;
+	/*unicode-range: U+0020-25CA;*/
+}
 @font-face {
 	font-family:'DIN-Regular';
 	src: url('fonts/DIN-Regular_gdi.eot');
@@ -260,6 +420,15 @@ input:focus {
 	.navbar-nav > li > a{
 		padding-top:10px;
 		padding-bottom:10px;
+	}
+	.row.same-height-row {
+		display: table;
+		width: 100%;
+	}
+	.row.same-height-row [class*="col-"] {
+		float: none;
+		display: table-cell;
+		vertical-align: top;
 	}
 }
 @media only screen and (min-width:1024px) {
