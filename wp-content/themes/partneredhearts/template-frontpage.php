@@ -45,6 +45,31 @@
 		<?PHP endif; 
 		endwhile;
 		endif;?>
+		<div class="row no-gutter same-height-row">
+			<div class="col-sm-6 background-color-white">
+				<div class="font-color-teal content-padding">
+					<h2>
+                        UPCOMING EVENTS
+					</h2>
+					<ul>
+						<li>Event 1</li>
+						<li>Event 2</li>
+						<li>Event 3</li>
+					</ul>				
+				</div>
+			</div>
+			<div class="col-sm-6 background-color-turquoise">				
+				<div class="font-color-white content-padding">
+					<h2>
+                       DON'T MISS OUT
+					</h2>
+					<p>Stay up-to-date with all of our upcoming activities and news by<br/>signing up for our Partnered Hearts Newsletter.</p>
+					<br/>
+					<br/>
+					<p><button class="background-color-teal">Subscribe</button></p>
+				</div>
+			</div>
+		</div>	
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
