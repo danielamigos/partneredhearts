@@ -2,7 +2,7 @@
 		</div><!--end wrap-->
 		<!-- footer -->
 		<footer class="footer" style="min-height:<?PHP the_field('footer_height','option'); ?>px; background-color:lightgray;">	
-            <div class="container-fluid background-color-dark-gray" style="min-height:<?PHP the_field('footer_height','option'); ?>px;">   
+            <div class="container-fluid" style="min-height:<?PHP the_field('footer_height','option'); ?>px; background-color:#6D6E70;">   
                 <div class="row">
                     <div class="col-sm-12">
                         <div>

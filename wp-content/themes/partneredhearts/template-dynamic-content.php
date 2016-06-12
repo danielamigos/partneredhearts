@@ -1,14 +1,16 @@
-<?php /* Template Name: FrontPage Template */ get_header(); ?>
-
-		<div class="row no-gutter">
-			<div class="col-md-12 frontpage-jumbotron-wrapper">
-				<div class="frontpage-jumbotron">
-					<img src="<?PHP echo get_field('jumbotron_image')['url']; ?>" alt="Partnered Hearts" />
-				</div>
+<?php /* Template Name: Dynamic Content Template */ get_header(); ?>
+ 
+	<div class="row no-gutter">
+		<div class="col-md-12 background-color-teal">
+			<div class="dynamic-content-header">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/page-subheader.png" alt="Partnered Hearts"/>
+				<h1 style="display:inline-block;">CONNECTING ARIZONA CAREGIVING PROFESSIONALS</h1>
 			</div>
-		</div>   
- 	<?PHP  
-	// START DYNAMIC CONTENT
+		</div>
+	</div>  
+	
+	<?PHP  
+	// check if the flexible content field has rows of data
     if( have_rows('dynamic_content') ): 
 		while ( have_rows('dynamic_content') ) : 
 			the_row();
@@ -83,38 +85,33 @@
 						<?PHP the_sub_field('heading_content');?>
 					</div>
 				</div>
-			</div>
+			</div>			
+			<?php  elseif(get_row_layout() == 'text_and_image_quote_column_and_form'): $image = get_sub_field('image')?>
+			<div class="row no-gutter same-height-row">
+				<div class="col-sm-6 <?PHP the_sub_field('text_and_image_background_color'); ?>">
+					<div class="<?PHP the_sub_field('text_and_image_quote_text_color'); ?> content-padding">
+						<h2>
+							<?PHP the_sub_field('title');?>
+						</h2>
+						<?PHP the_sub_field('content');?>					
+					</div>
+					<div class="font-color-white ">		
+						<div class="left-image-quote-and-author-wrapper">
+							<p class="left-image-quote font-family-fancy font-size-xxlarge"><?PHP the_sub_field('quote');?></p>
+							<p class="left-image-quote-author font-size-medium"><?PHP the_sub_field('quote_author');?></p>
+						</div>	
+						<img src="<?PHP echo $image['url']; ?>" alt="<?PHP echo $image['alt']; ?>" />	
+					</div>					
+				</div>
+				<div class="col-sm-6 <?PHP the_sub_field('form_background_color'); ?>">				
+					<div class="content-padding">
+						<?PHP echo do_shortcode(get_sub_field('form_short_code'));?>
+					</div>
+				</div>
+			</div>		
 			<?PHP endif; 
 		endwhile;
-	endif;	
-	// END| DYNAMIC CONTENT?>		
-	
-	
-		<div class="row no-gutter same-height-row">
-			<div class="col-sm-6 background-color-white">
-				<div class="font-color-teal content-padding">
-					<h2>
-                        UPCOMING EVENTS
-					</h2>
-					<ul>
-						<li>Event 1</li>
-						<li>Event 2</li>
-						<li>Event 3</li>
-					</ul>				
-				</div>
-			</div>
-			<div class="col-sm-6 background-color-turquoise">				
-				<div class="font-color-white content-padding">
-					<h2>
-                       DON'T MISS OUT
-					</h2>
-					<p>Stay up-to-date with all of our upcoming activities and news by<br/>signing up for our Partnered Hearts Newsletter.</p>
-					<br/>
-					<br/>
-					<p><button class="background-color-teal">Subscribe</button></p>
-				</div>
-			</div>
-		</div>	
+	endif;?>			
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

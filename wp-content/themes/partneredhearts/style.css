@@ -81,6 +81,7 @@ input:focus {
 h2{
 	margin-top:0;
 	margin-bottom:25px;
+	line-height: 40px;
 }
 
 /*------------------------------------*\
@@ -203,6 +204,10 @@ h2{
 {
 	color: #000000;
 }
+.font-color-gray
+{
+	color: #939597;
+}
 
 /*------------------------------------*\
     FONT FAMILIES
@@ -255,8 +260,9 @@ h2{
 }
 .background-color-dark-gray
 {
-	background-color: #6D6E70;
-}.background-color-turquoise
+	background-color: #939597;
+}
+.background-color-turquoise
 {
     background-color:#00A693;
 }
@@ -264,9 +270,23 @@ h2{
 {
 	background-color: #00808C;
 }
+.background-color-white
+{
+	background-color: #ffffff;
+}
 /*------------------------------------*\
     DYNAMIC CONTENT
 \*------------------------------------*/
+.dynamic-content-header
+{
+	padding: 30px;
+}
+.dynamic-content-header h1
+{    
+	font-size: 32px;
+    margin-bottom: 15px;
+    margin-left: 40px;
+}
 .full-width-image-quote-and-author-wrapper
 {
 	position: absolute;
@@ -279,6 +299,68 @@ h2{
 {
 	padding: 0 12%;
 	line-height: 50px;
+}
+.left-image-quote-and-author-wrapper
+{
+	position: absolute;
+	width: 100%;
+	text-align: left;
+	bottom:0;
+	padding-bottom:30px;
+}
+.left-image-quote
+{
+	text-align: left;
+    padding: 0px 6% 0 6%;
+	line-height: 50px;
+}
+.left-image-quote-author
+{
+	text-align: left;
+    padding: 0px 6% 0 6%;
+}
+.right-image-quote-and-author-wrapper
+{
+	position: absolute;
+	width: 100%;
+	text-align: right;
+	bottom:0;
+	padding-bottom:30px;
+}
+.right-image-quote
+{
+	text-align: right;
+    padding: 0px 6% 0 6%;
+	line-height: 50px;
+}
+.right-image-quote-author
+{
+	text-align: right;
+    padding: 0px 6% 0 6%;
+}
+.text-column-content
+{
+	padding-top: 35px;
+	padding-left: 40px;
+	padding-right: 63px;
+	padding-bottom: 0;	
+}
+.full_width_heading
+{
+	padding: 20px 30px;
+}
+.full_width_heading h2
+{
+	display: inline-block;    
+	margin: 0;
+    vertical-align: middle;
+	margin-right: 30px;
+}
+.full_width_heading p
+{
+	display: inline-block;	    
+	margin: 0;
+    vertical-align: middle;
 }
 /*------------------------------------*\
     FRONTPAGE
@@ -298,7 +380,10 @@ h2{
 }
 .content-padding
 {
-	padding: 35px;
+	padding-top: 35px;
+	padding-left: 40px;
+	padding-right: 63px;
+	padding-bottom: 35px;
 }
 /*------------------------------------*\
     PAGES

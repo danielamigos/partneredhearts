@@ -122,6 +122,80 @@
                         "display": "block",
                         "sub_fields": [
                             {
+                                "key": "field_575cdbec4110f",
+                                "label": "Left Column",
+                                "name": "",
+                                "type": "tab",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placement": "top",
+                                "endpoint": 0
+                            },
+                            {
+                                "key": "field_575cef6f51564",
+                                "label": "Left Column Background Color",
+                                "name": "left_column_background_color",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "background-color-gray": "Gray",
+                                    "background-color-dark-gray": "Dark Gray",
+                                    "background-color-teal": "Teal",
+                                    "background-color-turquoise": "Turquoise",
+                                    "background-color-white": "White"
+                                },
+                                "default_value": [],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "placeholder": "",
+                                "disabled": 0,
+                                "readonly": 0
+                            },
+                            {
+                                "key": "field_575cefbe51566",
+                                "label": "Left Column Text Color",
+                                "name": "left_column_text_color",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "font-color-black": "Black",
+                                    "font-color-gray": "Gray",
+                                    "font-color-teal": "Teal",
+                                    "font-color-turquoise": "Turquoise",
+                                    "font-color-white": "White"
+                                },
+                                "default_value": [],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "placeholder": "",
+                                "disabled": 0,
+                                "readonly": 0
+                            },
+                            {
                                 "key": "field_575548a151a48",
                                 "label": "Left Column Title",
                                 "name": "left_column_title",
@@ -159,6 +233,80 @@
                                 "tabs": "all",
                                 "toolbar": "full",
                                 "media_upload": 1
+                            },
+                            {
+                                "key": "field_575cdc0341110",
+                                "label": "Right Column",
+                                "name": "",
+                                "type": "tab",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placement": "top",
+                                "endpoint": 0
+                            },
+                            {
+                                "key": "field_575cefa251565",
+                                "label": "Right Column Background Color",
+                                "name": "right_column_background_color",
+                                "type": "select",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "background-color-gray": "Gray",
+                                    "background-color-dark-gray": "Dark Gray",
+                                    "background-color-teal": "Teal",
+                                    "background-color-turquoise": "Turquoise",
+                                    "background-color-white": "White"
+                                },
+                                "default_value": [],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "placeholder": "",
+                                "disabled": 0,
+                                "readonly": 0
+                            },
+                            {
+                                "key": "field_575cf05151567",
+                                "label": "Right Column Text Color",
+                                "name": "right_column_text_color",
+                                "type": "select",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "font-color-black": "Black",
+                                    "font-color-gray": "Gray",
+                                    "font-color-teal": "Teal",
+                                    "font-color-turquoise": "Turquoise",
+                                    "font-color-white": "White"
+                                },
+                                "default_value": [],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "placeholder": "",
+                                "disabled": 0,
+                                "readonly": 0
                             },
                             {
                                 "key": "field_575548c651a4a",
@@ -278,6 +426,491 @@
                         ],
                         "min": "",
                         "max": ""
+                    },
+                    {
+                        "key": "575cda764110c",
+                        "name": "text_column_and_image_quote_column",
+                        "label": "Text Column and Image Quote Column",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_575cda9b4110d",
+                                "label": "Text Column Position",
+                                "name": "text_column_position",
+                                "type": "select",
+                                "instructions": "Select on which side the text will be displayed",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "Left": "Left",
+                                    "Right": "Right"
+                                },
+                                "default_value": [],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "placeholder": "",
+                                "disabled": 0,
+                                "readonly": 0
+                            },
+                            {
+                                "key": "field_575cdbda4110e",
+                                "label": "Text Column",
+                                "name": "",
+                                "type": "tab",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placement": "top",
+                                "endpoint": 0
+                            },
+                            {
+                                "key": "field_575cdc3041111",
+                                "label": "Text Column Title",
+                                "name": "text_column_title",
+                                "type": "text",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": "",
+                                "readonly": 0,
+                                "disabled": 0
+                            },
+                            {
+                                "key": "field_575cdc4641112",
+                                "label": "Text Column Content",
+                                "name": "text_column_content",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1
+                            },
+                            {
+                                "key": "field_575cdc5241113",
+                                "label": "Image Quote Column",
+                                "name": "",
+                                "type": "tab",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placement": "top",
+                                "endpoint": 0
+                            },
+                            {
+                                "key": "field_575cdc6141114",
+                                "label": "Image",
+                                "name": "image",
+                                "type": "image",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "thumbnail",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": ""
+                            },
+                            {
+                                "key": "field_575cdc6f41115",
+                                "label": "Quote",
+                                "name": "quote",
+                                "type": "text",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": "",
+                                "readonly": 0,
+                                "disabled": 0
+                            },
+                            {
+                                "key": "field_575cdc7641116",
+                                "label": "Quote Author",
+                                "name": "quote_author",
+                                "type": "text",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": "",
+                                "readonly": 0,
+                                "disabled": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "575ce86267c2c",
+                        "name": "full_width_heading",
+                        "label": "Full Width Heading",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_575ce8ac67c2d",
+                                "label": "Background Color",
+                                "name": "background_color",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "background-color-gray": "Gray",
+                                    "background-color-dark-gray": "Dark Gray",
+                                    "background-color-teal": "Teal",
+                                    "background-color-turquoise": "Turquoise",
+                                    "background-color-white": "White"
+                                },
+                                "default_value": [],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "placeholder": "",
+                                "disabled": 0,
+                                "readonly": 0
+                            },
+                            {
+                                "key": "field_575ce90d67c2e",
+                                "label": "Heading Content",
+                                "name": "heading_content",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    {
+                        "key": "575cf3f1249b5",
+                        "name": "text_and_image_quote_column_and_form",
+                        "label": "Text and Image Quote Column and Form Column",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_575cf55b249b6",
+                                "label": "Text and Image Quote Column",
+                                "name": "",
+                                "type": "tab",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placement": "top",
+                                "endpoint": 0
+                            },
+                            {
+                                "key": "field_575cf56f249b7",
+                                "label": "Text and Image Background Color",
+                                "name": "text_and_image_background_color",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "background-color-gray": "Gray",
+                                    "background-color-dark-gray": "Dark Gray",
+                                    "background-color-teal": "Teal",
+                                    "background-color-turquoise": "Turquoise",
+                                    "background-color-white": "White"
+                                },
+                                "default_value": [],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "placeholder": "",
+                                "disabled": 0,
+                                "readonly": 0
+                            },
+                            {
+                                "key": "field_575cf5e2249bb",
+                                "label": "Text and Image Quote Text Color",
+                                "name": "text_and_image_quote_text_color",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "font-color-black": "Black",
+                                    "font-color-gray": "Gray",
+                                    "font-color-teal": "Teal",
+                                    "font-color-turquoise": "Turquoise",
+                                    "font-color-white": "White"
+                                },
+                                "default_value": [],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "placeholder": "",
+                                "disabled": 0,
+                                "readonly": 0
+                            },
+                            {
+                                "key": "field_575cf726249bc",
+                                "label": "Title",
+                                "name": "title",
+                                "type": "text",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": "",
+                                "readonly": 0,
+                                "disabled": 0
+                            },
+                            {
+                                "key": "field_575cf739249bd",
+                                "label": "Content",
+                                "name": "content",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1
+                            },
+                            {
+                                "key": "field_575cf74d249be",
+                                "label": "Image",
+                                "name": "image",
+                                "type": "image",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "thumbnail",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": ""
+                            },
+                            {
+                                "key": "field_575cf75c249bf",
+                                "label": "Quote",
+                                "name": "quote",
+                                "type": "text",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": "",
+                                "readonly": 0,
+                                "disabled": 0
+                            },
+                            {
+                                "key": "field_575cf77b249c0",
+                                "label": "Quote Author",
+                                "name": "quote_author",
+                                "type": "text",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": "",
+                                "readonly": 0,
+                                "disabled": 0
+                            },
+                            {
+                                "key": "field_575cf59f249b8",
+                                "label": "Form Column",
+                                "name": "",
+                                "type": "tab",
+                                "instructions": "",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "placement": "top",
+                                "endpoint": 0
+                            },
+                            {
+                                "key": "field_575cf5a8249b9",
+                                "label": "Form Background Color",
+                                "name": "form_background_color",
+                                "type": "select",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "background-color-gray": "Gray",
+                                    "background-color-dark-gray": "Dark Gray",
+                                    "background-color-teal": "Teal",
+                                    "background-color-turquoise": "Turquoise",
+                                    "background-color-white": "White"
+                                },
+                                "default_value": [],
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "ui": 0,
+                                "ajax": 0,
+                                "placeholder": "",
+                                "disabled": 0,
+                                "readonly": 0
+                            },
+                            {
+                                "key": "field_575cf5b9249ba",
+                                "label": "Form Short Code",
+                                "name": "form_short_code",
+                                "type": "text",
+                                "instructions": "Short Code From Contact Form 7 form",
+                                "required": "",
+                                "conditional_logic": "",
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": "",
+                                "readonly": 0,
+                                "disabled": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
                     }
                 ]
             }
@@ -288,6 +921,13 @@
                     "param": "page_template",
                     "operator": "==",
                     "value": "template-frontpage.php"
+                }
+            ],
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "template-dynamic-content.php"
                 }
             ]
         ],
