@@ -79,8 +79,8 @@ input:focus {
 	border:1px solid #04A4CC;
 }
 h2{
-	margin-top:0;
-	margin-bottom:25px;
+	margin-top:15px;
+	margin-bottom: 10px;
 	line-height: 40px;
 }
 
@@ -166,6 +166,43 @@ h2{
     color: #ffffff;
     /*padding-top: 30px;*/
 }
+
+.footer-top-padding
+{
+	padding-top: 15px;
+}
+.footer .sponser-logo
+{
+	display:inline-block;
+	vertical-align: middle;
+	padding-left: 20px;
+	padding-right: 10px;
+}
+.footer .footer-left-padding
+{
+	padding-left: 40px;	
+}
+.footer .footer-right-padding
+{
+	padding-right: 20px;	
+}
+.footer .footer-align-right
+{
+	text-align: right;
+}
+.footer .footer-social-icon
+{
+	display: inline-block;
+	padding: 4px;
+}
+#footer-subscribe-email
+{
+	width:150px;
+}
+
+
+
+
 /*Bootstrap Grid system, no-gutters*/
 .row.no-gutter {
   margin-left: 0;
@@ -209,6 +246,11 @@ h2{
 	color: #939597;
 }
 
+.font-color-light-gray
+{
+	color: #d1d3d4;
+}
+
 /*------------------------------------*\
     FONT FAMILIES
 \*------------------------------------*/
@@ -228,7 +270,7 @@ h2{
 \*------------------------------------*/
 .font-size-xxlarge
 {
-    font-size:70px; 
+    font-size:10px; 
 }
 .font-size-xlarge
 {
@@ -311,13 +353,13 @@ h2{
 .left-image-quote
 {
 	text-align: left;
-    padding: 0px 6% 0 6%;
+    padding: 15px 6% 0 6%;
 	line-height: 50px;
 }
 .left-image-quote-author
 {
 	text-align: left;
-    padding: 0px 6% 0 6%;
+    padding: 15px 6% 0 6%;
 }
 .right-image-quote-and-author-wrapper
 {
@@ -362,6 +404,22 @@ h2{
 	margin: 0;
     vertical-align: middle;
 }
+.white-background-text h2
+{
+	color: #00808C;
+}
+.white-background-text h3
+{
+    color:#00A693;
+}
+.white-background-text a
+{
+    color:#00A693;
+}
+.white-background-text p
+{
+	color: #939597;
+}
 /*------------------------------------*\
     FRONTPAGE
 \*------------------------------------*/
@@ -389,6 +447,18 @@ h2{
     PAGES
 \*------------------------------------*/
 
+.full-width-form input,
+.full-width-form textarea{
+	font-size:20px;
+	width:100%
+}
+
+.borderless-button
+{
+	padding: 0;
+	border: none;
+	height: 50px;
+}
 
 
 /*------------------------------------*\
@@ -477,7 +547,11 @@ h2{
 @media only screen and (min-width:320px) {
 
 }
-@media only screen and (min-width:480px) {
+@media only screen and (min-width:480px) {	
+	.font-size-xxlarge
+	{
+		font-size:28px; 
+	}
 
 }
 @media only screen and (min-width:768px) {
@@ -514,9 +588,17 @@ h2{
 		display: table-cell;
 		vertical-align: top;
 	}
+
+	.font-size-xxlarge
+	{
+		font-size:42px; 
+	}
 }
 @media only screen and (min-width:1024px) {
-
+	.font-size-xxlarge
+	{
+		font-size:70px; 
+	}
 }
 @media only screen and (min-width:1140px) {
 

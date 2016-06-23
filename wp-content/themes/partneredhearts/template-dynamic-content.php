@@ -63,7 +63,40 @@
 						<h2 class="font-color-teal">	
 							<?PHP the_sub_field('text_column_title');?>
 						</h2>
-						<?PHP the_sub_field('text_column_content');?>					
+						<div class="white-background-text">
+							<?PHP the_sub_field('text_column_content');?>
+						</div>					
+					</div>
+				</div>
+				<?PHP if($position=="Left"): ?>
+				<div class="col-sm-6">				
+					<div class="font-color-white ">		
+						<div class="right-image-quote-and-author-wrapper">
+							<p class="right-image-quote font-family-fancy font-size-xxlarge"><?PHP the_sub_field('quote');?></p>
+							<p class="right-image-quote-author font-size-medium"><?PHP the_sub_field('quote_author');?></p>
+						</div>	
+						<img src="<?PHP echo $image['url']; ?>" alt="<?PHP echo $image['alt']; ?>" />	
+					</div>
+				</div>
+				<?PHP endif;?>
+			</div>	
+			<?php  elseif(get_row_layout() == 'text_column_and_image_column'): $image = get_sub_field('image'); $position =  get_sub_field('text_column_position'); ?>
+			<div class="row no-gutter same-height-row">
+				<?PHP if($position=="Right"): ?>
+				<div class="col-sm-6">				
+					<div class="font-color-white ">
+						<img src="<?PHP echo $image['url']; ?>" alt="<?PHP echo $image['alt']; ?>" />	
+					</div>
+				</div>
+				<?PHP endif;?>
+				<div class="col-sm-6 ">
+					<div class="font-color-gray text-column-content">
+						<h2 class="font-color-teal">	
+							<?PHP the_sub_field('text_column_title');?>
+						</h2>
+						<div class="white-background-text">
+							<?PHP the_sub_field('text_column_content');?>
+						</div>					
 					</div>
 				</div>
 				<?PHP if($position=="Left"): ?>
@@ -102,6 +135,22 @@
 						</div>	
 						<img src="<?PHP echo $image['url']; ?>" alt="<?PHP echo $image['alt']; ?>" />	
 					</div>					
+				</div>
+				<div class="col-sm-6 <?PHP the_sub_field('form_background_color'); ?>">				
+					<div class="content-padding">
+						<?PHP echo do_shortcode(get_sub_field('form_short_code'));?>
+					</div>
+				</div>
+			</div>		
+			<?php  elseif(get_row_layout() == 'text_and_form_column'): ?>
+			<div class="row no-gutter same-height-row" style="min-height:75vh;">
+				<div class="col-sm-6">
+					<div class="font-color-gray content-padding">
+						<h2 class="font-color-teal"><?PHP the_sub_field('title');?></h2>
+						<div class="white-background-text">
+							<?PHP the_sub_field('content');?>
+						</div>					
+					</div>			
 				</div>
 				<div class="col-sm-6 <?PHP the_sub_field('form_background_color'); ?>">				
 					<div class="content-padding">

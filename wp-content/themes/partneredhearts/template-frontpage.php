@@ -9,7 +9,7 @@
 		</div>   
  	<?PHP  
 	// START DYNAMIC CONTENT
-    if( have_rows('dynamic_content') ): 
+     if( have_rows('dynamic_content') ): 
 		while ( have_rows('dynamic_content') ) : 
 			the_row();
 			if( get_row_layout() == 'two_text_columns' ): ?>
@@ -61,7 +61,40 @@
 						<h2 class="font-color-teal">	
 							<?PHP the_sub_field('text_column_title');?>
 						</h2>
-						<?PHP the_sub_field('text_column_content');?>					
+						<div class="white-background-text">
+							<?PHP the_sub_field('text_column_content');?>
+						</div>					
+					</div>
+				</div>
+				<?PHP if($position=="Left"): ?>
+				<div class="col-sm-6">				
+					<div class="font-color-white ">		
+						<div class="right-image-quote-and-author-wrapper">
+							<p class="right-image-quote font-family-fancy font-size-xxlarge"><?PHP the_sub_field('quote');?></p>
+							<p class="right-image-quote-author font-size-medium"><?PHP the_sub_field('quote_author');?></p>
+						</div>	
+						<img src="<?PHP echo $image['url']; ?>" alt="<?PHP echo $image['alt']; ?>" />	
+					</div>
+				</div>
+				<?PHP endif;?>
+			</div>	
+			<?php  elseif(get_row_layout() == 'text_column_and_image_column'): $image = get_sub_field('image'); $position =  get_sub_field('text_column_position'); ?>
+			<div class="row no-gutter same-height-row">
+				<?PHP if($position=="Right"): ?>
+				<div class="col-sm-6">				
+					<div class="font-color-white ">
+						<img src="<?PHP echo $image['url']; ?>" alt="<?PHP echo $image['alt']; ?>" />	
+					</div>
+				</div>
+				<?PHP endif;?>
+				<div class="col-sm-6 ">
+					<div class="font-color-gray text-column-content">
+						<h2 class="font-color-teal">	
+							<?PHP the_sub_field('text_column_title');?>
+						</h2>
+						<div class="white-background-text">
+							<?PHP the_sub_field('text_column_content');?>
+						</div>					
 					</div>
 				</div>
 				<?PHP if($position=="Left"): ?>
@@ -83,38 +116,52 @@
 						<?PHP the_sub_field('heading_content');?>
 					</div>
 				</div>
-			</div>
+			</div>			
+			<?php  elseif(get_row_layout() == 'text_and_image_quote_column_and_form'): $image = get_sub_field('image')?>
+			<div class="row no-gutter same-height-row">
+				<div class="col-sm-6 <?PHP the_sub_field('text_and_image_background_color'); ?>">
+					<div class="<?PHP the_sub_field('text_and_image_quote_text_color'); ?> content-padding">
+						<h2>
+							<?PHP the_sub_field('title');?>
+						</h2>
+						<?PHP the_sub_field('content');?>					
+					</div>
+					<div class="font-color-white ">		
+						<div class="left-image-quote-and-author-wrapper">
+							<p class="left-image-quote font-family-fancy font-size-xxlarge"><?PHP the_sub_field('quote');?></p>
+							<p class="left-image-quote-author font-size-medium"><?PHP the_sub_field('quote_author');?></p>
+						</div>	
+						<img src="<?PHP echo $image['url']; ?>" alt="<?PHP echo $image['alt']; ?>" />	
+					</div>					
+				</div>
+				<div class="col-sm-6 <?PHP the_sub_field('form_background_color'); ?>">				
+					<div class="content-padding">
+						<?PHP echo do_shortcode(get_sub_field('form_short_code'));?>
+					</div>
+				</div>
+			</div>		
+			<?php  elseif(get_row_layout() == 'text_and_form_column'): ?>
+			<div class="row no-gutter same-height-row">
+				<div class="col-sm-6">
+					<div class="font-color-gray content-padding">
+						<h2 class="font-color-teal"><?PHP the_sub_field('title');?></h2>
+						<div class="white-background-text">
+							<?PHP the_sub_field('content');?>
+						</div>					
+					</div>			
+				</div>
+				<div class="col-sm-6 <?PHP the_sub_field('form_background_color'); ?>">				
+					<div class="content-padding">
+						<?PHP echo do_shortcode(get_sub_field('form_short_code'));?>
+					</div>
+				</div>
+			</div>		
 			<?PHP endif; 
 		endwhile;
-	endif;	
+	endif;		
 	// END| DYNAMIC CONTENT?>		
 	
 	
-		<div class="row no-gutter same-height-row">
-			<div class="col-sm-6 background-color-white">
-				<div class="font-color-teal content-padding">
-					<h2>
-                        UPCOMING EVENTS
-					</h2>
-					<ul>
-						<li>Event 1</li>
-						<li>Event 2</li>
-						<li>Event 3</li>
-					</ul>				
-				</div>
-			</div>
-			<div class="col-sm-6 background-color-turquoise">				
-				<div class="font-color-white content-padding">
-					<h2>
-                       DON'T MISS OUT
-					</h2>
-					<p>Stay up-to-date with all of our upcoming activities and news by<br/>signing up for our Partnered Hearts Newsletter.</p>
-					<br/>
-					<br/>
-					<p><button class="background-color-teal">Subscribe</button></p>
-				</div>
-			</div>
-		</div>	
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
